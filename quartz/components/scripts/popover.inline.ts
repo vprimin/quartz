@@ -38,6 +38,11 @@ async function mouseEnterHandler(
   targetUrl.hash = ""
   targetUrl.search = ""
 
+  // If it's the same page, just return without fetching
+  if (thisUrl.toString() === targetUrl.toString()) {
+    return
+  }
+
   const response = await fetchCanonical(targetUrl).catch((err) => {
     console.error(err)
   })
@@ -100,10 +105,36 @@ async function mouseEnterHandler(
   }
 }
 
+function handleSamePageClick(evt: MouseEvent) {
+  const link = evt.currentTarget as HTMLAnchorElement
+  const thisUrl = new URL(document.location.href)
+  thisUrl.hash = ""
+  thisUrl.search = ""
+  const targetUrl = new URL(link.href)
+  const hash = decodeURIComponent(targetUrl.hash)
+  targetUrl.hash = ""
+  targetUrl.search = ""
+
+  if (thisUrl.toString() === targetUrl.toString() && hash !== "") {
+    evt.preventDefault()
+    const mainContent = document.querySelector("article")
+    const heading = mainContent?.querySelector(hash) as HTMLElement | null
+    if (heading) {
+      heading.scrollIntoView({ behavior: "smooth" })
+      // Optionally update the URL without a page reload
+      history.pushState(null, "", hash)
+    }
+  }
+}
+
 document.addEventListener("nav", () => {
   const links = [...document.getElementsByClassName("internal")] as HTMLAnchorElement[]
   for (const link of links) {
     link.addEventListener("mouseenter", mouseEnterHandler)
-    window.addCleanup(() => link.removeEventListener("mouseenter", mouseEnterHandler))
+    link.addEventListener("click", handleSamePageClick)
+    window.addCleanup(() => {
+      link.removeEventListener("mouseenter", mouseEnterHandler)
+      link.removeEventListener("click", handleSamePageClick)
+    })
   }
 })

@@ -1,0 +1,10 @@
+- [ ] Update to the latest version
+- [ ] sysdm.cpl - enable rdp+rename
+- [ ] timedate.cpl - set correct time zone
+- [ ] [[Microsoft Activation Script|Activate]]
+- [ ] [[Win Server Change Defaeult Language RU>EN|Change language to Eng as default]]
+- [ ] Chrome | tablis (links) | solarized chrome theme
+- [ ] Startis back
+- [ ] [[bginfo]]
+- [ ] antivirus
+- [ ] backups

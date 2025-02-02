@@ -31,8 +31,13 @@ Sharing a personal note, maybe it can be helpful to others.
 24. [ ]  iWallpapaer (appstore) 
 25. [ ] Hidden Bar (appstore) -
 26. [ ] Messengers (Teams, Telegram, WhatsApp) — [allinone.im](http://allinone.im) ----
+<<<<<<< HEAD
+27. [ ] RayCast
+28. [ ]  Antivirus 
+=======
 27. [ ] RayCast----
 28. [ ]  Antivirus ----
+>>>>>>> a734ba00f068fed393858ae5bc50f10c09f48057
 29. [ ]  **iTerm+oh-my-zhs + Fig** + warp
 30. [ ]  UTM
 31. [ ] Obsidian + Шрифты 
@@ -66,7 +71,11 @@ Sharing a personal note, maybe it can be helpful to others.
      [Amazon Q (fig)](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line-getting-started-installing.html) 
      [Warp](https://www.warp.dev/)
 1. [ ]  UTM
+<<<<<<< HEAD
+2. [ ] Obsidian + [[Fonts]]
+=======
 2. [ ] Obsidian + Шрифты 
+>>>>>>> a734ba00f068fed393858ae5bc50f10c09f48057
 3. [ ] Battle.net, StarCraft2
 4. [ ] OBS Studio
 5. [ ] ChatGPT

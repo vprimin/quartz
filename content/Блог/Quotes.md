@@ -1,8 +1,14 @@
 ---
+<<<<<<< HEAD
+title: цитаты
+---
+> [!NOTE] Тут копятся рандомные цитаты которые мне понравились. На русском и английском языках
+=======
 title: Цитаты
 date: 2025-01-30
 ---
 > [!info] Тут копятся рандомные цитаты которые мне понравились. На русском и английском языках
+>>>>>>> a734ba00f068fed393858ae5bc50f10c09f48057
 
 
 ![[black_and_white_image.jpeg|700]]
@@ -23,11 +29,22 @@ date: 2025-01-30
 
 ```
 Always be dreaming about your next project, whatever it is. 
+<<<<<<< HEAD
+Because the moment you stop dreaming you're just waiting to die
+=======
 Because the moment you stop dreaming, you're just waiting to die
+>>>>>>> a734ba00f068fed393858ae5bc50f10c09f48057
 ```
 
 ```
 We can not change the past 
+<<<<<<< HEAD
+but we are can start today to make a better tomorrow..
+```
+
+```
+The only people that will remember all the late nights you worked is your family
+=======
 but we can start today to make a better tomorrow.
 ```
 
@@ -65,4 +82,5 @@ The only people who will remember all the late nights you worked is your family
 ```
 В магазине увидел книгу: Как решить 50 процентов проблем в своей жизни. 
 Взял две.
+>>>>>>> a734ba00f068fed393858ae5bc50f10c09f48057
 ```

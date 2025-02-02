@@ -8,12 +8,15 @@ tags:
   - "#github"
   - docker
   - aws
+<<<<<<< HEAD
+=======
   - iOS
   - owncloud
   - windows
   - Linux
   - MacOS
   - vpn
+>>>>>>> a734ba00f068fed393858ae5bc50f10c09f48057
 ---
 ![[svg.svg]]
 

@@ -3,7 +3,7 @@ import { QuartzComponentProps } from "../../components/types"
 import HeaderConstructor from "../../components/Header"
 import BodyConstructor from "../../components/Body"
 import { pageResources, renderPage } from "../../components/renderPage"
-import { ProcessedContent, QuartzPluginData, defaultProcessedContent } from "../vfile"
+import { ProcessedContent, defaultProcessedContent } from "../vfile"
 import { FullPageLayout } from "../../cfg"
 import {
   FilePath,
@@ -18,37 +18,22 @@ import { write } from "./helpers"
 import { i18n } from "../../i18n"
 import DepGraph from "../../depgraph"
 
-interface TagPageOptions extends FullPageLayout {
-  sort?: (f1: QuartzPluginData, f2: QuartzPluginData) => number
-}
-
-export const TagPage: QuartzEmitterPlugin<Partial<TagPageOptions>> = (userOpts) => {
+export const TagPage: QuartzEmitterPlugin<Partial<FullPageLayout>> = (userOpts) => {
   const opts: FullPageLayout = {
     ...sharedPageComponents,
     ...defaultListPageLayout,
-    pageBody: TagContent({ sort: userOpts?.sort }),
+    pageBody: TagContent(),
     ...userOpts,
   }
 
-  const { head: Head, header, beforeBody, pageBody, afterBody, left, right, footer: Footer } = opts
+  const { head: Head, header, beforeBody, pageBody, left, right, footer: Footer } = opts
   const Header = HeaderConstructor()
   const Body = BodyConstructor()
 
   return {
     name: "TagPage",
     getQuartzComponents() {
-      return [
-        Head,
-        Header,
-        Body,
-        ...header,
-        ...beforeBody,
-        pageBody,
-        ...afterBody,
-        ...left,
-        ...right,
-        Footer,
-      ]
+      return [Head, Header, Body, ...header, ...beforeBody, pageBody, ...left, ...right, Footer]
     },
     async getDependencyGraph(ctx, content, _resources) {
       const graph = new DepGraph<FilePath>()
@@ -105,17 +90,14 @@ export const TagPage: QuartzEmitterPlugin<Partial<TagPageOptions>> = (userOpts) 
           const tag = slug.slice("tags/".length)
           if (tags.has(tag)) {
             tagDescriptions[tag] = [tree, file]
-            if (file.data.frontmatter?.title === tag) {
-              file.data.frontmatter.title = `${i18n(cfg.locale).pages.tagContent.tag}: ${tag}`
-            }
           }
         }
       }
 
       for (const tag of tags) {
         const slug = joinSegments("tags", tag) as FullSlug
+        const externalResources = pageResources(pathToRoot(slug), resources)
         const [tree, file] = tagDescriptions[tag]
-        const externalResources = pageResources(pathToRoot(slug), file.data, resources)
         const componentData: QuartzComponentProps = {
           ctx,
           fileData: file.data,

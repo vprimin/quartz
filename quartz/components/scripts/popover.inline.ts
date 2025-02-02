@@ -1,10 +1,9 @@
 import { computePosition, flip, inline, shift } from "@floating-ui/dom"
 import { normalizeRelativeURLs } from "../../util/path"
-import { fetchCanonical } from "./util"
 
 const p = new DOMParser()
 async function mouseEnterHandler(
-  this: HTMLAnchorElement,
+  this: HTMLLinkElement,
   { clientX, clientY }: { clientX: number; clientY: number },
 ) {
   const link = this
@@ -34,11 +33,11 @@ async function mouseEnterHandler(
   thisUrl.hash = ""
   thisUrl.search = ""
   const targetUrl = new URL(link.href)
-  const hash = decodeURIComponent(targetUrl.hash)
+  const hash = targetUrl.hash
   targetUrl.hash = ""
   targetUrl.search = ""
 
-  const response = await fetchCanonical(targetUrl).catch((err) => {
+  const response = await fetch(`${targetUrl}`).catch((err) => {
     console.error(err)
   })
 
@@ -101,7 +100,7 @@ async function mouseEnterHandler(
 }
 
 document.addEventListener("nav", () => {
-  const links = [...document.getElementsByClassName("internal")] as HTMLAnchorElement[]
+  const links = [...document.getElementsByClassName("internal")] as HTMLLinkElement[]
   for (const link of links) {
     link.addEventListener("mouseenter", mouseEnterHandler)
     window.addCleanup(() => link.removeEventListener("mouseenter", mouseEnterHandler))

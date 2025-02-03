@@ -8,8 +8,6 @@ tags:
   - "#github"
   - docker
   - aws
-  - iOS
-  - owncloud
   - windows
   - Linux
   - MacOS

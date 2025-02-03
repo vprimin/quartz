@@ -22,10 +22,10 @@ date: 03/02/2025
 ## Regedit
 Win+R 'regedit'
 
-Ветка HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run
-Добавляем значение
+Ветка HKLM\Software\Microsoft\Windows\CurrentVersion\Run
+Добавляем значение "строковый параметр"
 ```
-"C:\bginfo\bginfo64.exe" "C:\bginfo\bginfo.bgi" /timer:0 /silent /nolicprompt
+"C:\BGinfo\Bginfo64.exe" "C:\BGinfo\bginfo.bgi" /timer:0 /silent /nolicprompt
 ```
 Таким образом программа будет запускаться для всех пользователей на хосте
 

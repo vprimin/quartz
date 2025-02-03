@@ -1,7 +1,8 @@
 ---
-title: цитаты
+title: Цитаты
+date: 2025-01-30
 ---
-> [!NOTE] Тут копятся рандомные цитаты которые мне понравились. На русском и английском языках
+> [!info] Тут копятся рандомные цитаты которые мне понравились. На русском и английском языках
 
 
 ![[black_and_white_image.jpeg|700]]
@@ -22,14 +23,46 @@ title: цитаты
 
 ```
 Always be dreaming about your next project, whatever it is. 
-Because the moment you stop dreaming you're just waiting to die
+Because the moment you stop dreaming, you're just waiting to die
 ```
 
 ```
 We can not change the past 
-but we are can start today to make a better tomorrow..
+but we can start today to make a better tomorrow.
 ```
 
 ```
-The only people that will remember all the late nights you worked is your family
+The only people who will remember all the late nights you worked is your family
+```
+
+```
+Времена не выбирают, В них живут и умирают...© Александр Кушнер
+```
+
+```
+Не зная ни сна и не отдыха 
+При солнечном и лунном свете, 
+Мы делаем деньги из воздуха 
+Чтобы снова пустить их на ветер…
+```
+
+## Далее порция цитат в стиле Джейсона Стетхема
+
+```
+учше посрать дома и опоздать, чем успеть и обосраться
+```
+
+```
+«Упал — вставай, встал — упай, 
+Упай — чокопай, не суди, не гуди, 
+не будай, вада буди дабуди дабудай».
+```
+
+```
+Одна ошибка и ты ошибся
+```
+
+```
+В магазине увидел книгу: Как решить 50 процентов проблем в своей жизни. 
+Взял две.
 ```

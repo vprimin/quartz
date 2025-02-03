@@ -16,3 +16,4 @@ date: 03/02/2025
 - [ ]  [Notepad ++](https://notepad-plus-plus.org/downloads/)
 - [ ]  antivirus
 - [ ]  backups
+- [ ] [TeamViewer host](https://898.tv/skphost)

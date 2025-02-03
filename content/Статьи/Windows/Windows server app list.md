@@ -6,6 +6,7 @@ date: 03/02/2025
 ---
 
 - [ ]  Update to the latest version
+- [ ]  [[Link on GitHub|Activate]]
 - [ ]  sysdm.cpl - enable RDP+rename hostname
 - [ ]  timedate.cpl - set correct time zone
 - [ ]  [[Win Server Change Default Language RU>EN]]

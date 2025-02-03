@@ -2,12 +2,8 @@
 date: 10/06/2024
 title: Цифровой сад
 tags:
-  - "#obsidian"
   - "#mikrotik"
-  - "#zabbix"
-  - "#github"
   - docker
-  - aws
   - windows
   - Linux
   - MacOS
